@@ -13,21 +13,21 @@ contract('Karma', function(accounts) {
 
 //Testing to see if the contract deplyment goes through and if the karma credit is issued to the owner of the contract
   it("Deploys Karma contract correctly and admin compensated", async () => {
-    const karma = await Karma.deployed();
+    const karma = await Karma.deployed(); //deplying the mail Karma contract
 
-    const balanceOwner = await karma.balanceOf(owner, {from: owner});
+    const balanceOwner = await karma.balanceOf(owner, {from: owner});//finding the balance of the owner after deployment
     assert.equal(balanceOwner, 1000*10**17, 'Admin compensated correctly');
 
   });
 
 //Testing creating of member instances and the corresponding issue of karma credits as per the established rules
   it("Should create a member with correct details and compensate both the karma admin and the member", async () => {
-    const karma = await Karma.deployed();
-    const initialOwnerBalance = await karma.balanceOf(owner, {from: owner});
-    const member1 = await karma.createKarmaMembers("Mom and Pop shop 1",8,{from: owner});
-    const finalOwnerBalance = await karma.balanceOf(owner, {from: owner});
-    const memAddress = await karma.getKarmaMembers({from: owner});
-    const initialMemBalance = await karma.balanceOf(memAddress[0], {from: owner});
+    const karma = await Karma.deployed();//deploying the Karma contract
+    const initialOwnerBalance = await karma.balanceOf(owner, {from: owner}); //finding the balance of the owner after deployment
+    const member1 = await karma.createKarmaMembers("Mom and Pop shop 1",8,{from: owner}); //deploying a member
+    const finalOwnerBalance = await karma.balanceOf(owner, {from: owner});//calculate the balance of the karma owner after deployment of member
+    const memAddress = await karma.getKarmaMembers({from: owner}); //Get the addresses of all members
+    const initialMemBalance = await karma.balanceOf(memAddress[0], {from: owner}); //Calculate the balance of the newly deployed contract
     const compensation = 500*10**17;
 
     assert.equal(finalOwnerBalance - initialOwnerBalance, compensation, "Karma admin compensated correctly");
@@ -36,11 +36,11 @@ contract('Karma', function(accounts) {
 
   it("Should allow the handover of member admin to respective admins", async () => {
     const karma = await Karma.deployed();
-    await karma.createKarmaMembers("Mom and Pop shop 1",6,{from: owner});
-    await karma.createKarmaMembers("Audio pro shop 1",9,{from: owner});
-    await karma.createKarmaMembers("Distributor A/S",7,{from: owner});
+    await karma.createKarmaMembers("Mom and Pop shop 1",6,{from: owner}); //deploying a member
+    await karma.createKarmaMembers("Audio pro shop 1",9,{from: owner}); //deploying a member
+    await karma.createKarmaMembers("Distributor A/S",7,{from: owner}); //deploying a member
 
-    const memAddress = await karma.getKarmaMembers({from: owner});
+    const memAddress = await karma.getKarmaMembers({from: owner}); //get the addresses of all the member instances
 
     const member1 = await Karma.at(memAddress[0]);
     const member2 = await Karma.at(memAddress[1]);
