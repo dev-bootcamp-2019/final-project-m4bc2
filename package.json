@@ -1,0 +1,29 @@
+{
+  "name": "final-project-m4bc2",
+  "version": "1.0.0",
+  "description": "A demo of ethereum based customer engagement experience",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-bootcamp-2019/final-project-m4bc2.git"
+  },
+  "author": "bc@m4bc2.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-bootcamp-2019/final-project-m4bc2/issues"
+  },
+  "homepage": "https://github.com/dev-bootcamp-2019/final-project-m4bc2#readme",
+  "dependencies": {
+    "next": "^4.1.4",
+    "next-routes": "^1.4.2",
+    "react": "^16.7.0",
+    "openzeppelin-solidity": "^2.1.2",
+    "react-dom": "^16.7.0",
+    "semantic-ui-react": "^0.84.0",
+    "web3": "^1.0.0-beta.37"
+  }
+}
