@@ -19,3 +19,61 @@ In subsequnet versions, the following will be done:
       with clear checks (rules) for awarding karma credits. For e.g. for a given product, the user can buy only once, the user can
       upgrade only once etc
   1.  Accounts trying to claim Karma Credits and failing repeatedly will be frozen for further investigation. Exact rules to be finalised
+  
+  
+## Setup
+### prerequisites:
+* Truffle
+* Ganache-cli
+
+### Installation steps:
+1. Pl install the following
+
+        npm init
+        npm install --save web3@1.0.0-beta.37
+        npm install --save next@7.0.1 react react-dom
+        npm install --save semantic-ui-react
+        npm install --save next-routes
+
+1. Pl copy the following from my repo:
+
+        contracts
+        installed_contracts
+        migrations
+        pages
+        src
+        test
+        truffle-config.js
+        truffle.js
+
+1. changes to package.json
+    under scripts, pl ensure that you have:
+  
+        "test": "mocha",  
+        "dev": "node src/server.js"
+
+### compiling contract
+
+        truffle compile
+
+#### migrating contract
+
+        truffle migrate
+
+####  testing contract
+
+        truffle test
+
+### To view the web app:
+
+        truffle migrate --reset
+  
+  copy the contract address from the output and paste the address in src> components> ContractAddress.js and save
+  from the project folder on the command prompt pl execute: 
+  
+        npm run dev
+        
+  once the server is ready, pl open app on loalhost:3000
+
+
+
