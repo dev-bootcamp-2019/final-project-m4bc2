@@ -1,6 +1,6 @@
 import React from 'react';
 
-const contractAddress = '0xE6A1CDf17945BB78f116bf1124c5D8fED49BD66D'; //paste the newly deployed contract address here
+const contractAddress = '0x62c82b32ad72d63345143a2D3C864C488038a635'; //paste the newly deployed contract address here
 
 export default contractAddress;
 

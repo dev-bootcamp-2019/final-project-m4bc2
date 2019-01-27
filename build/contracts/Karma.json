@@ -27694,14 +27694,74 @@
       "transactionHash": "0x85aa9f9488d91aa6a6435aa1bd9f4a85698de9a555ef41cb6d2e7ba87c29856a"
     },
     "1548553594722": {
-      "events": {},
+      "events": {
+        "0x48335238b4855f35377ed80f164e8c6f3c366e54ac00b96a6402d4a9814a03a5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "frozen",
+              "type": "bool"
+            }
+          ],
+          "name": "FrozenFunds",
+          "type": "event",
+          "signature": "0x48335238b4855f35377ed80f164e8c6f3c366e54ac00b96a6402d4a9814a03a5"
+        },
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event",
+          "signature": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        }
+      },
       "links": {},
-      "address": "0xE6A1CDf17945BB78f116bf1124c5D8fED49BD66D",
-      "transactionHash": "0x777581983ccca7df2a6520705ce2a55ac166fbca9d5b1374d994e2c150d55145"
+      "address": "0x62c82b32ad72d63345143a2D3C864C488038a635",
+      "transactionHash": "0x0342af592a9032074dc43d3a0410db35c5bc43f6cb399b6f06c33ada1e35eb89"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-27T01:52:38.492Z",
+  "updatedAt": "2019-01-27T02:25:58.777Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {
