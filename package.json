@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/dev-bootcamp-2019/final-project-m4bc2#readme",
   "dependencies": {
-    "next": "^4.1.4",
+    "next": "^7.0.1",
     "next-routes": "^1.4.2",
-    "react": "^16.7.0",
     "openzeppelin-solidity": "^2.1.2",
+    "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "semantic-ui-react": "^0.84.0",
     "web3": "^1.0.0-beta.37"
