@@ -56,11 +56,11 @@ In subsequnet versions, the following will be done:
 
         truffle compile
 
-#### migrating contract
+### migrating contract
 
         truffle migrate
 
-####  testing contract
+###  testing contract
 
         truffle test
 
@@ -68,12 +68,46 @@ In subsequnet versions, the following will be done:
 
         truffle migrate --reset
   
-  copy the contract address from the output and paste the address in src> components> ContractAddress.js and save
-  from the project folder on the command prompt pl execute: 
+  copy the contract address from the output and paste the address in src> components> ContractAddress.js and save.
+  An instance of the contract has been deployed on the Rinkeby network and the contract address is   
+  
+        0xCAd994bd15dA255343f8Af858eE7b90b424a434E
+        
+  In order to point the web app to the rinkeby instance, pl paste the above address in src> components> ContractAddress.js and save.
+  
+  From the project folder on the command prompt pl execute: 
   
         npm run dev
         
-  once the server is ready, pl open app on loalhost:3000
+  Once the server is ready, pl open app on loalhost:3000
 
+## About the demo Web app
+The Karma Credit app caters to three types of users: 
+* Karma Owner: The user who has deployed the contract on ethereum. There is only one Karma Owner.
+* Karma Member Owners: The user who owns the contract instance for a given affiliate/ partner. There can be only one Karma Member Admin for a given member. There will be as many Karma Member Owners as there are Karma Members.
+* Patients: End users who buy the devices and experience the different engagement schemes of M4BC2 via the affiliates
 
+### Overview of the functionality implimented in the demo app
+  1. Karma Owner will be able to create new members and administer these members. She can 
+      * name and rename karma members
+      * assign the difficulty levels of karma members
+      * can assign an owner to karma members: After assigning the owner, the karma owner sill not be able to alter these via the web app
+  1.  Karma Member Owners will be able to do the following on the members that they own:
+      * chnage the name of the members
+      * assign a new owner
+  1. Anyone can claim Karma credits and transfer credits to one another. Any user who is not a karma owner or a karma member owner will be considered to be a patient. Patients can claim karma credits either from a generic page where they have to specify the affiliate brand or from the page of their affiliate.
+  
+
+### Some points to note:
+  1. There are links in the app that point to transactions and artefacts on the blockchain (via ether scan). These will work only when the app is pointing to the rinkeby instance of the contract
+  1. Pl note that only the Karma Owner can chnage the difficulty level of a member. However, this feature is not implemented in the web app even though the smart contract has the relevent function. So, to chnage the difficulty level of a member, pl use remix or truffle CLI
+  1. Pl note that the web app doesnt impliment the product register features of the smart contract
+  
+### way ahead
+  1. Product registered features will be integrated into the web app
+  1. ERC20 tikens will be replaced with ERC 721 tokens
+
+### Known problems
+  1. When administering the karma member details, some errors are thrown even though the transaction went through. Will be fixed soon.
+ 
 
