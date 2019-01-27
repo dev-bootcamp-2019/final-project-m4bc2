@@ -5,3 +5,6 @@
 2. Maximum usage: I have implemented max usage limits for Karma Credit claims from members and patients in order to curtail the fraudulent claims.
 3. I have avoided delegation calls as I was unsure - chose to reuse reliable code in the contracts I own rather than using externally owned contracts with same code.
 4. Checks-Effects-Interactions Pattern: Used modifiers with robust input requirements
+
+## Vulnerabilities that I have to address
+1. Integer Overflow and Underflow
