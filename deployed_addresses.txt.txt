@@ -1,0 +1,5 @@
+Contract instance deployed on rinkeby test network with the address:
+0xCAd994bd15dA255343f8Af858eE7b90b424a434E
+
+see it on rinkeby etherscan:
+https://rinkeby.etherscan.io/address/0xCAd994bd15dA255343f8Af858eE7b90b424a434E
